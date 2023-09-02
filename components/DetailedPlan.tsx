@@ -2,11 +2,7 @@
 import { IPlan } from "@/types/nonprimitive_types";
 import React, { useEffect, useState } from "react";
 import Spinner from "./loading/Spinner";
-import { options } from "@/components/blocks/options_block";
-import Info from "./blocks/info_block";
-import Image from 'next/image';
-import DefaultButton from "./buttons/DefaultButton";
-import { PanelBlock } from "./blocks/panel_block";
+import { PanelBlocks } from "./blocks/panels";
 
 interface IProps {
   selectedPlan: any;
@@ -16,7 +12,6 @@ interface IProps {
 
 const DetailedPlan = (props: IProps) => {
   const [detailedPlan, setDetailedPlan] = useState<IPlan | undefined>(undefined);
-  const [html, setHtml] = useState();
   useEffect(() => {
     setDetailedPlan(props.selectedPlan);
   }, [props.selectedPlan]);
@@ -27,7 +22,7 @@ const DetailedPlan = (props: IProps) => {
 
   return (
     <div className="flex items-center w-full flex-col p-[25px] h-full">
-      <PanelBlock/>
+      <PanelBlocks/>
     </div>
   );
 };
