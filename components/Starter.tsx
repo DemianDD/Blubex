@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import DefaultButton from "./buttons/DefaultButton";
+import Title from "./text/Title";
 
 const Starter = () => {
   //const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -31,9 +32,7 @@ const Starter = () => {
   return (
     <div className="flex justify-center items-center w-full">
       <div className="flex flex-col items-center">
-        <div className="font-[400] text-[36px] mb-5 w-2/3 text-center">
-          Your dreams website in few clicks...
-        </div>
+        <Title title='Your dreams website in few clicks...'/>
         <DefaultButton
           title="get started"
           type="primary"

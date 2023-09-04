@@ -7,7 +7,7 @@ import { IPanel } from "./panels";
 export default function Overview({ setOpenPanel }: IPanel) {
   const { userData } = useContext(UserContext);
   const handleGoBack = () => {
-    setOpenPanel(2);
+    setOpenPanel(1);
   }
 
   return (
@@ -26,7 +26,7 @@ export default function Overview({ setOpenPanel }: IPanel) {
           <></>
         )}
       </div>
-      <div className="mt-auto flex justify-between">
+      <div className="mt-1 flex justify-between w-3/4 md:w-full md:mt-auto fixed md:relative bottom-0 left-[50%] md:left-0 transform translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0">
         <DefaultButton
           type="primary"
           width={125}
@@ -34,7 +34,7 @@ export default function Overview({ setOpenPanel }: IPanel) {
         />
         <SecondaryButton
           type="secondary"
-          width={100}
+          width={125}
           title="go back"
           onClick={handleGoBack}
         />

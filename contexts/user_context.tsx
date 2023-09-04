@@ -12,6 +12,7 @@ interface UserProviderProps {
 }
 
 interface IUserData {
+  brandName: string;
   description: string;
   files: File[];
   keywords: string[],
@@ -20,31 +21,43 @@ interface IUserData {
 interface UserContextProps {
   userData: IUserData;
   setUserData: React.Dispatch<React.SetStateAction<IUserData>>;
-  handleInputChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  handleTextAreaChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
   handleDocumentUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleKeywordSelect: (keyword: string) => void;
 }
 
 export const UserContext = createContext<UserContextProps>({
   userData: {
+    brandName: "",
     description: "",
     files: [],
     keywords: [],
   },
   setUserData: () => {},
-  handleInputChange: () => {},
+  handleTextAreaChange: () => {},
   handleDocumentUpload: () => {},
   handleKeywordSelect: () => {},
+  handleInputChange: () => {},
 });
 
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [userData, setUserData] = useState<IUserData>({
+    brandName: "",
     description: "",
     files: [],
     keywords: [],
   });
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleTextAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setUserData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setUserData((prevData) => ({
       ...prevData,
@@ -91,9 +104,10 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
       value={{
         userData,
         setUserData,
-        handleInputChange,
+        handleTextAreaChange,
         handleDocumentUpload,
-        handleKeywordSelect
+        handleKeywordSelect,
+        handleInputChange
       }}
     >
       {children}

@@ -17,7 +17,11 @@ const DetailedPlan = (props: IProps) => {
   }, [props.selectedPlan]);
 
   if (!detailedPlan) {
-    return <Spinner optionalStyles="absolute bottom-1/2 left-1/2" />;
+    return(
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <Spinner/>
+      </div>
+    ) 
   }
 
   return (

@@ -3,23 +3,23 @@ import { IPlan } from "@/types/nonprimitive_types";
 export const plans: IPlan[] = [
   {
     id: "Sss-111-000",
-    name: "Single Page Web Site",
+    name: "Single Page",
     desc: "Simple single page web site to represents your main benefits",
-    price: 500,
+    price: 13,
     image_url: "/images/simplesite_image.png",
   },
   {
     id: "Mmm-222-000",
     name: "Marketplace",
     desc: "Improve your selling stats and make more customers with your own online-shop",
-    price: 2500,
+    price: 67,
     image_url: "/images/marketplace_image.png",
   },
   {
     id: "Lll-333-000",
-    name: "Author`s blog web site",
+    name: "Author`s blog",
     desc: "Keep in touch with your auditory anytime and anywhere",
-    price: 1000,
+    price: 26,
     image_url: "/images/personalblog_image.png",
   },
 ];
