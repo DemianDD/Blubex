@@ -1,9 +1,13 @@
-import Starter from "@/components/Starter";
+import Instruction from "@/components/starter/Instruction";
+import Starter from "@/components/starter/Starter";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen p-[25px]">
+    <main className="min-h-screen">
+      
       <Starter/>
+      <Instruction/>
+      
     </main>
   );
 }
