@@ -94,3 +94,21 @@ body {
     src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
   }
 }
+
+.fade-entering {
+  opacity: 0;
+  transform: translateX(300px); /* Adjust the value for your desired initial position */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-entered {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-exiting {
+  opacity: 0;
+  transform: translateX(-200px); /* Adjust the value for your desired exit position */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}

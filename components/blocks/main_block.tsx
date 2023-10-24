@@ -17,18 +17,25 @@ export default function MainWishes({ setOpenPanel }: IPanel) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
-    console.log('here')
+    console.log("here");
     setShow(true);
-  }
+  };
 
   const handleConfirm = () => {
     setOpenPanel(1);
   };
 
-  const clearAll = () => {
+  const clearDescription = () => {
     setUserData((prevData) => ({
       ...prevData,
       description: "",
+    }));
+  };
+
+  const clearBrandname = () => {
+    setUserData((prevData) => ({
+      ...prevData,
+      brandName: "",
     }));
   };
 
@@ -37,10 +44,18 @@ export default function MainWishes({ setOpenPanel }: IPanel) {
       <Title title="Describe your project..." />
       <div className="flex-1 relative max-h-full">
         <div className="relative">
-          <img
-            src="/icons/write.svg"
-            className="absolute top-[45%] right-2 -translate-x-1/2 -translate-y-1/2"
-          />
+          {userData.brandName.length >= 1 ? (
+            <img
+              src="/icons/garbage.svg"
+              className="absolute top-3 right-3 cursor-pointer hover:bg-[#212121] p-1 rounded-lg"
+              onClick={clearBrandname}
+            />
+          ) : (
+            <img
+              src="/icons/write.svg"
+              className="absolute top-[45%] right-2 -translate-x-1/2 -translate-y-1/2"
+            />
+          )}
           <input
             placeholder="Enter your brand name"
             className="bg-[#0c0c0c] text-sm p-4 mb-2 rounded-xl w-full focus:outline-0 text-white"
@@ -61,17 +76,17 @@ export default function MainWishes({ setOpenPanel }: IPanel) {
             <img
               src="/icons/garbage.svg"
               className="absolute top-3 right-3 cursor-pointer hover:bg-[#212121] p-1 rounded-lg"
-              onClick={clearAll}
+              onClick={clearDescription}
             />
           ) : (
             <></>
           )}
         </div>
-        <div className="absolute bottom-3 right-3 flex items-center cursor-pointer hover:bg-[#212121] p-1 rounded-lg" onClick={handleShow}>
-          <img
-            src="/icons/info.svg"
-            className="mr-0.5"
-          />
+        <div
+          className="absolute bottom-3 right-3 flex items-center cursor-pointer hover:bg-[#212121] p-1 rounded-lg"
+          onClick={handleShow}
+        >
+          <img src="/icons/info.svg" className="mr-0.5" />
           <span className="text-[10px] text-[#2195f3a5]">See example</span>
         </div>
       </div>
@@ -121,7 +136,7 @@ export default function MainWishes({ setOpenPanel }: IPanel) {
           onClick={handleConfirm}
         />
       </div>
-      {show && <VerticallyCentered/>}
+      {show && <VerticallyCentered />}
     </div>
   );
 }

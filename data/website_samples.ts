@@ -18,28 +18,44 @@ export const instructions = [
 
 export const website_examples = [
     {
-        image: '/templates/1.jpg'
+        image: '/templates/1.jpg',
+        title: 'Business Card Site',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
     {
-        image: '/templates/2.jpg'
+        image: '/templates/2.jpg',
+        title: 'E-Commerce',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
     {
-        image: '/templates/3.jpg'
+        image: '/templates/3.jpg',
+        title: 'Wedding Site',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
     {
-        image: '/templates/4.jpg'
+        image: '/templates/4.jpg',
+        title: 'Crypto',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
     {
-        image: '/templates/5.jpg'
+        image: '/templates/5.jpg',
+        title: 'Crypto',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
     {
-        image: '/templates/6.jpg'
+        image: '/templates/6.jpg',
+        title: 'E-Commerce',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
     {
-        image: '/templates/7.jpg'
+        image: '/templates/7.jpg',
+        title: 'Wedding Site',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
     {
-        image: '/templates/8.png'
+        image: '/templates/8.png',
+        title: 'Healty Blog',
+        desc: 'Your personal business card website is your digital identity, and in todays interconnected world, its an essential tool for anyone looking to make a memorable first impression and advance their career or business prospects. Get started today and watch your online presence flourish.'
     },
 ]
 
